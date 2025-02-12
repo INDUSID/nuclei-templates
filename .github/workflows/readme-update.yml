@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     if: github.repository == 'projectdiscovery/nuclei-templates'
     steps:
       - name: Install tree
@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: useblacksmith/setup-python@v6
         with:
           python-version: "3.8"
 
